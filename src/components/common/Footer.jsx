@@ -18,17 +18,21 @@ export default function Footer({
     rightText,
     onLeftClick,
     onRightClick,
+    rightDisabled = false,
+    leftDisabled = false,
 }) {
     return (
         <>
             <footer className="page_footer">
                 <button type="button" className="payment-page__footer_btn footer_left_btn"
-                    onClick={onLeftClick}>
+                    onClick={onLeftClick}
+                    disabled={leftDisabled}>
                     {leftText}
                 </button>
                 <button type="button"
                     className="payment-page__footer_btn footer_right_btn"
-                    onClick={onRightClick}>
+                    onClick={onRightClick}
+                    disabled={rightDisabled}>
                     {rightText}
                 </button>
             </footer>
